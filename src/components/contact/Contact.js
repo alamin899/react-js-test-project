@@ -10,7 +10,7 @@ export default function Contact() {
                   name:"Al-Amin",
                   email:"alamin@appnap.io",
                   mob:"01758845299",
-                  bg:"AB+",
+                  address:"Kuizbari,Tangail sadar,Tangail",
 
               }
           };
@@ -21,11 +21,12 @@ export default function Contact() {
 
     return(
         <div>
-            <h1>Contact</h1>
+            <h1><strong>Contact</strong></h1>
             <hr/>
-            <h1>Name : {data?.name}</h1>
-            <h1>Mobile : {data?.mob}</h1>
-            <h1>Blood Group : {data?.bg}</h1>
+            <h1><strong>Name :</strong> {data?.name}</h1>
+            <h1><strong>Email :</strong> {data?.email}</h1>
+            <h1><strong>Mobile :</strong> {data?.mob}</h1>
+            <h1><strong>Address :</strong> {data?.address}</h1>
         </div>
     );
 }

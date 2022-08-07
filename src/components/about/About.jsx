@@ -5,7 +5,7 @@ export default function About() {
     return(
         <div className="container-fluid">
             <Row>
-                <Col md={2}></Col>
+                <Col md={3}></Col>
                 <Col>
                     <div className="fw-bolder">
                         Submit Your Information
@@ -25,7 +25,11 @@ export default function About() {
                         </div>
                         <div>
                             <label className="fw-bolder">Date of birth</label>
-                            <input className="form-control" type="date" />
+                            <input className="form-control" type="date" placeholder="Enter Date" />
+                        </div>
+                        <div>
+                            <label className="fw-bolder">Profile Image</label>
+                            <input className="form-control" type="file" />
                         </div>
                         <div>
                             <label className="fw-bolder">Address</label>
@@ -36,7 +40,7 @@ export default function About() {
                         </div>
                 </Form>
                 </Col>
-                <Col md={2}></Col>
+                <Col md={3}></Col>
             </Row>
         </div>
     );

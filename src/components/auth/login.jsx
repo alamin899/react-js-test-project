@@ -39,8 +39,9 @@ export default function Login() {
   const loginSubmit = (e) => {
     e.preventDefault();
     let validate =handleValidation();
-      localStorage.setItem('email', JSON.stringify(email));
-      localStorage.setItem('password', JSON.stringify(password));
+      localStorage.setItem('email', email);
+      localStorage.setItem('password', password);
+      window.location.href = "/dashboard";
     
   };
 

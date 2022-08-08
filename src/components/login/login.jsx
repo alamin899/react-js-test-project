@@ -12,6 +12,8 @@ export default function Login() {
     if (!email.match(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/)) {
       formIsValid = false;
       setemailError("Email Not Valid");
+      localStorage.removeItem('email');
+      localStorage.removeItem('password');
       return false;
     } else {
       setemailError("");
@@ -23,6 +25,8 @@ export default function Login() {
       setpasswordError(
         "Only Letters and length must best min 8 Chracters and Max 22 Chracters"
       );
+      localStorage.removeItem('email');
+      localStorage.removeItem('password');
       return false;
     } else {
       setpasswordError("");
@@ -34,9 +38,10 @@ export default function Login() {
 
   const loginSubmit = (e) => {
     e.preventDefault();
-    handleValidation();
-    localStorage.setItem('email', JSON.stringify(email));
-    localStorage.setItem('password', JSON.stringify(password));
+    let validate =handleValidation();
+      localStorage.setItem('email', JSON.stringify(email));
+      localStorage.setItem('password', JSON.stringify(password));
+    
   };
 
   return (

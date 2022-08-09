@@ -1,10 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import React from 'react';
-import {Navbar, Nav, Container,A} from 'react-bootstrap';
+import {Navbar, Nav, Container} from 'react-bootstrap';
 import {NavLink} from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
-export default function NavbarComponent() {
+export default function DashboardNavbarComponent() {
     const auth= useAuth();
     
     const logOut = ()=>{
